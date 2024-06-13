@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace H2_Coffe_machine.Models
+﻿namespace H2_Coffe_machine.Models.Coffee_machine_components
 {
 	internal class Heater
 	{

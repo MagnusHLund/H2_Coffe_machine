@@ -43,22 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CoffeeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Interfaces\ICoffeeFilter.cs" />
-    <Compile Include="Interfaces\ICoffeeMachine.cs" />
+    <Compile Include="Interfaces\ICapacity.cs" />
+    <Compile Include="Interfaces\IFilterCoffee.cs" />
     <Compile Include="Interfaces\IPowerSwitch.cs" />
-    <Compile Include="Interfaces\IWaterTank.cs" />
-    <Compile Include="Models\Coffe machine components\Grinder.cs" />
-    <Compile Include="Models\Coffee machines\CoffeeMachine1000.cs" />
-    <Compile Include="Models\Coffee machines\CoffeeMachine2000.cs" />
-    <Compile Include="Models\Coffee machines\CoffeeMachine5000.cs" />
-    <Compile Include="Models\Coffe machine components\Filter.cs" />
+    <Compile Include="Models\Coffee machine components\BeanStorage.cs" />
+    <Compile Include="Models\Coffee machine components\Filters\BeansFilter.cs" />
+    <Compile Include="Models\Coffee machine components\Grinder.cs" />
+    <Compile Include="Models\Coffee machines\BeanCoffeeMachine.cs" />
+    <Compile Include="Models\Coffee machines\PowderCoffeeMachine.cs" />
     <Compile Include="Models\CoffeeMachine.cs" />
-    <Compile Include="Models\Coffe machine components\Heater.cs" />
-    <Compile Include="Models\BeverageContainer.cs" />
-    <Compile Include="Models\Coffe machine components\Pot.cs" />
-    <Compile Include="Models\Coffe machine components\PowerSwitch.cs" />
-    <Compile Include="Models\Coffe machine components\WaterTank.cs" />
+    <Compile Include="Models\Coffee machine components\Heater.cs" />
+    <Compile Include="Models\Coffee machine components\Dispenser.cs" />
+    <Compile Include="Models\Coffee machine components\PowerSwitch.cs" />
+    <Compile Include="Models\Coffee machine components\WaterTank.cs" />
+    <Compile Include="Models\Coffee machine components\Filters\PowderFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\View.cs" />

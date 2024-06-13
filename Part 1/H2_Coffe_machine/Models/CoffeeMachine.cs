@@ -1,29 +1,24 @@
-﻿using H2_Coffe_machine.Interfaces;
+﻿using H2_Coffe_machine.Models.Coffee_machine_components;
+using H2_Coffe_machine.Models.Coffee_machine_components.Filters;
 
 namespace H2_Coffe_machine.Models
 {
-	internal abstract class CoffeeMachine : ICoffeeMachine
+	internal abstract class CoffeeMachine
 	{
-		private protected Filter filter;
-		private protected PowerSwitch powerSwitch;
-		private protected WaterTank waterTank;
-		private protected float BeansPerCup {  get; set; }
+		private protected PowerSwitch PowerSwitch { get; private set; }
+		private protected Dispenser Dispenser { get; private set; }
+		private protected Heater Heater { get; private set; }
+		private protected WaterTank WaterTank { get; private set; }
+		private protected float MaximumWater { get; private set; }
 
-		internal CoffeeMachine(int maximumAmountOfBeans, float maximumAmountOfWater, float beansPerCup) 
+		internal CoffeeMachine(float maximumWater, PowerSwitch powerSwitch, Dispenser dispenser, Heater heater, WaterTank waterTank)
 		{
-			BeansPerCup = beansPerCup;
-
-			filter = new Filter(maximumAmountOfBeans);
-			waterTank = new WaterTank(maximumAmountOfWater);
-			powerSwitch = new PowerSwitch();
-		}
-
-		private protected virtual void MakeCoffee(int cupsToMake)
-		{
-			float waterPerCup = 0.24f;
-			int beansPerCup = 200;
-			float waterToAdd = waterPerCup * cupsToMake;
-			float beansToAdd = beansPerCup * cupsToMake;
+			MaximumWater = maximumWater;
+			PowerSwitch = powerSwitch;
+			Dispenser = dispenser;
+			Heater = heater;
+			WaterTank = waterTank;
 		}
 	}
+
 }
