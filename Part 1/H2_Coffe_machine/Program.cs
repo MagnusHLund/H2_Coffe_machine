@@ -1,4 +1,5 @@
-﻿using System;
+﻿using H2_Coffe_machine.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,9 @@ namespace H2_Coffe_machine
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
+			new MainController().Main();
 		}
 	}
 }

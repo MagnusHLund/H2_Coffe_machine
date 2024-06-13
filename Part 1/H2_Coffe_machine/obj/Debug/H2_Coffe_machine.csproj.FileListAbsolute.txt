@@ -1,0 +1,2 @@
+C:\Users\magnu\source\repos\H2_Coffe_machine\Part 1\H2_Coffe_machine\obj\Debug\H2_Coffe_machine.csproj.AssemblyReference.cache
+C:\Users\magnu\source\repos\H2_Coffe_machine\Part 1\H2_Coffe_machine\obj\Debug\H2_Coffe_machine.csproj.CoreCompileInputs.cache
