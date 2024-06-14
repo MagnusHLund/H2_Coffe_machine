@@ -1,8 +1,10 @@
-﻿namespace H2_Coffe_machine.Models.Coffee_machine_components
+﻿using H2_Coffe_machine.Interfaces;
+
+namespace H2_Coffe_machine.Models.Coffee_machine_components
 {
-	internal class Grinder
+	internal class Grinder : IGrinder
 	{
-		internal void GrindBeans(int beansToGrind)
+		public void GrindBeans(int beansToGrind)
 		{
 
 		}

@@ -1,25 +1,27 @@
-﻿namespace H2_Coffe_machine.Models.Coffee_machine_components
+﻿using H2_Coffe_machine.Interfaces;
+
+namespace H2_Coffe_machine.Models.Coffee_machine_components
 {
-	internal class WaterTank
+	internal class WaterTank : ICapacity
 	{
-		private float _maxCapacityInLiters {get; set;}
-		internal float WaterInLiters { get; set; }
+		public float MaxCapacity {get; set;}
+		public float CurrentCapacity { get; set; }
 
 		public WaterTank(float maxCapacityInLiters) 
 		{
-			_maxCapacityInLiters = maxCapacityInLiters;
-			WaterInLiters = 0;
+			MaxCapacity = maxCapacityInLiters;
+			CurrentCapacity = 0;
 		}
 
-		public void AddWater(float waterToAddInLiters)
+		public void AddAmount(float waterToAddInLiters)
 		{
-			if(WaterInLiters + waterToAddInLiters > _maxCapacityInLiters)
+			if(CurrentCapacity + waterToAddInLiters > MaxCapacity)
 			{
-				WaterInLiters += waterToAddInLiters;
+				CurrentCapacity += waterToAddInLiters;
 			}
 			else
 			{
-				WaterInLiters = _maxCapacityInLiters;
+				CurrentCapacity = MaxCapacity;
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 
 namespace H2_Coffe_machine.Models.Coffee_machine_components.Filters
 {
-	internal class BeansFilter : IFilterCoffee
+	internal class BeansFilter : IFilter
 	{
 		public void FilterCoffee()
 		{

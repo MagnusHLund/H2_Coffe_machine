@@ -2,10 +2,16 @@
 
 namespace H2_Coffe_machine.Models.Coffee_machine_components.Filters
 {
-	internal class PowderFilter : IFilterCoffee
+	internal class PowderFilter : IFilter, ICapacity
 	{
-		internal float Powder { get; set; }
+		public float MaxCapacity { get; set; }
+		public float CurrentCapacity { get; set; }
 		public void FilterCoffee()
+		{
+
+		}
+
+		public void AddAmount(float amount)
 		{
 
 		}

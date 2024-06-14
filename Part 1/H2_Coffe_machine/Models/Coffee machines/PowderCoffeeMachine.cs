@@ -1,4 +1,4 @@
-﻿using H2_Coffe_machine.Models.Coffee_machine_components;
+﻿using H2_Coffe_machine.Interfaces;
 using H2_Coffe_machine.Models.Coffee_machine_components.Filters;
 
 namespace H2_Coffe_machine.Models.Coffee_machines
@@ -7,20 +7,20 @@ namespace H2_Coffe_machine.Models.Coffee_machines
 	{
 		private protected PowderFilter Filter { get; private set; }
 
-		internal PowderCoffeeMachine(float maximumWater, PowerSwitch powerSwitch, Dispenser dispenser, Heater heater, WaterTank waterTank, PowderFilter filter)
+		internal PowderCoffeeMachine(float maximumWater, IPowerSwitch powerSwitch, IDispense dispenser, IHeater heater, ICapacity waterTank, PowderFilter filter)
 			: base(maximumWater, powerSwitch, dispenser, heater, waterTank)
 		{
 			Filter = filter;
 		}
 
-		public void MakeCoffee(float waterLiters, float totalPowder)
+		public void MakeCoffee(float waterLiters, float powderToAdd)
 		{
-			WaterTank.AddWater(waterLiters);
+			WaterTank.AddAmount(waterLiters);
 			PowerSwitch.SwitchPower();
-			Heater.HeatWater(WaterTank.WaterInLiters);
-			Filter.Powder = totalPowder;
+			Heater.HeatWater(WaterTank.CurrentCapacity);
+			Filter.AddAmount(powderToAdd);
 			Filter.FilterCoffee();
-			Dispenser.DispenseCoffee();
+			Dispenser.Dispense();
 			PowerSwitch.SwitchPower();
 		}
 	}

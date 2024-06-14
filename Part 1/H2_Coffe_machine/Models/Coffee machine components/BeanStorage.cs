@@ -13,7 +13,7 @@ namespace H2_Coffe_machine.Models.Coffee_machine_components
 			CurrentCapacity = 0;
 		}
 
-		internal void AddBeans(int beansToAdd)
+		public void AddAmount(float beansToAdd)
 		{
 			if (CurrentCapacity + beansToAdd < MaxCapacity)
 			{

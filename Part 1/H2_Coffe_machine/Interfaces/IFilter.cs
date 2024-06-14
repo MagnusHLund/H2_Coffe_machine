@@ -1,6 +1,6 @@
 ﻿namespace H2_Coffe_machine.Interfaces
 {
-	internal interface IFilterCoffee
+	internal interface IFilter
 	{
 		void FilterCoffee();
 	}

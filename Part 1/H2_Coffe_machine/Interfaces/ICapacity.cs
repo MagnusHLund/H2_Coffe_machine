@@ -4,5 +4,6 @@
 	{
 		float MaxCapacity { get; set; }
 		float CurrentCapacity { get; set; }
+		void AddAmount(float amount);
 	}
 }
